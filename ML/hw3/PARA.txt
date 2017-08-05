@@ -1,0 +1,31 @@
+csª©¥»refine ver2
+C(64,3,3)
+C(64,3,3)
+MAX(2,2)
+DR(0.25)
+
+C(128,3,3)
+MAX(2,2)
+DR(0.25)
+
+C(256,3,3)
+MAX(2,2)
+DR(0.3)
+
+D1500
+DR(0.5)
+
+ADAmax
+VAL = rand(4000)
+ImageDataGenerator(
+       featurewise_center = False,
+       samplewise_center = False,
+       featurewise_std_normalization = False,
+       zca_whitening = False,
+       rotation_range=3,
+        width_shift_range=0.1,
+        height_shift_range=0.1,
+        horizontal_flip=True,
+        vertical_flip = False)
+epoch = 80
+batch = 64
